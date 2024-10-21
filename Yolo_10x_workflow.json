@@ -1,0 +1,369 @@
+{
+  "last_node_id": 87,
+  "last_link_id": 95,
+  "nodes": [
+    {
+      "id": 70,
+      "type": "UltralyticsVisualization",
+      "pos": [
+        1320,
+        210
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "results",
+          "type": "ULTRALYTICS_RESULTS",
+          "link": 73
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            75
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsVisualization"
+      },
+      "widgets_values": [
+        1,
+        1,
+        false
+      ]
+    },
+    {
+      "id": 68,
+      "type": "UltralyticsModelLoader",
+      "pos": [
+        140,
+        210
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "ULTRALYTICS_MODEL",
+          "type": "ULTRALYTICS_MODEL",
+          "links": [
+            71
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsModelLoader"
+      },
+      "widgets_values": [
+        "yolov10x.pt"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "LoadImage",
+      "pos": [
+        140,
+        320
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            77
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "glide (1) (1).jpeg",
+        "image"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "ImageResizeAdvanced",
+      "pos": [
+        520,
+        320
+      ],
+      "size": {
+        "0": 315,
+        "1": 218
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            78
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeAdvanced"
+      },
+      "widgets_values": [
+        768,
+        512,
+        "nearest",
+        "stretch",
+        "always",
+        0
+      ]
+    },
+    {
+      "id": 69,
+      "type": "UltralyticsInference",
+      "pos": [
+        970,
+        210
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 390
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "ULTRALYTICS_MODEL",
+          "link": 71
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 78
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ULTRALYTICS_RESULTS",
+          "type": "ULTRALYTICS_RESULTS",
+          "links": [
+            73
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            74
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "BOXES",
+          "type": "BOXES",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "MASKS",
+          "type": "MASKS",
+          "links": null,
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "PROBABILITIES",
+          "type": "PROBABILITIES",
+          "links": [],
+          "shape": 3,
+          "slot_index": 4
+        },
+        {
+          "name": "KEYPOINTS",
+          "type": "KEYPOINTS",
+          "links": null,
+          "shape": 3,
+          "slot_index": 5
+        },
+        {
+          "name": "OBB",
+          "type": "OBB",
+          "links": null,
+          "shape": 3,
+          "slot_index": 6
+        },
+        {
+          "name": "LABELS",
+          "type": "LABELS",
+          "links": [],
+          "shape": 3,
+          "slot_index": 7
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsInference"
+      },
+      "widgets_values": [
+        0.1,
+        0.7,
+        512,
+        768,
+        "cuda:0",
+        false,
+        false,
+        false,
+        "0, 1, 2, 9, 10, 12, 13"
+      ]
+    },
+    {
+      "id": 71,
+      "type": "PreviewImage",
+      "pos": [
+        1330,
+        390
+      ],
+      "size": {
+        "0": 415.8169860839844,
+        "1": 354.27777099609375
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 75
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    }
+  ],
+  "links": [
+    [
+      71,
+      68,
+      0,
+      69,
+      0,
+      "ULTRALYTICS_MODEL"
+    ],
+    [
+      73,
+      69,
+      0,
+      70,
+      0,
+      "ULTRALYTICS_RESULTS"
+    ],
+    [
+      74,
+      69,
+      1,
+      70,
+      1,
+      "IMAGE"
+    ],
+    [
+      75,
+      70,
+      0,
+      71,
+      0,
+      "IMAGE"
+    ],
+    [
+      77,
+      49,
+      0,
+      74,
+      0,
+      "IMAGE"
+    ],
+    [
+      78,
+      74,
+      0,
+      69,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7627768444385606,
+      "offset": [
+        188.7026166953084,
+        179.82085121966207
+      ]
+    }
+  },
+  "version": 0.4
+}

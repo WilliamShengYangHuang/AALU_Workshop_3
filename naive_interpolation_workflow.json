@@ -1,0 +1,2042 @@
+{
+  "last_node_id": 115,
+  "last_link_id": 195,
+  "nodes": [
+    {
+      "id": 39,
+      "type": "LoadImage",
+      "pos": [
+        492,
+        49
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            65
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "entropy_burst_alrorithmic_form_non-linear_city_3d_high_tech_des_6b81f8ae-c8a3-4caa-859a-719f4fc3806d.png",
+        "image"
+      ]
+    },
+    {
+      "id": 56,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1292,
+        239
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 78
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a landscape architecture becomes an auditorium"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1292,
+        487
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "watermark"
+      ]
+    },
+    {
+      "id": 87,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        -260
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 136
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 139
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            137
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 40,
+      "type": "LoadImage",
+      "pos": [
+        492,
+        -323
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            64
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Futuristic-Auditorium with Mountain View_pjce4wdmegm9 (2).png",
+        "image"
+      ]
+    },
+    {
+      "id": 85,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        -370
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 133
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            135
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 93,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        400
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 143
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 188
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            144
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 91,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        290
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 141
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 187
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            142
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 99,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        1090
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 148
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 190
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            149
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 103,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        1670
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 151
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 191
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            152
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 105,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        1780
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 153
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 192
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            154
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 78,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        -380
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 115
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 116
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            133
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.1
+      ]
+    },
+    {
+      "id": 49,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        -250
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 68
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            136
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.2
+      ]
+    },
+    {
+      "id": 90,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        280
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 173
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 174
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            141
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.3
+      ]
+    },
+    {
+      "id": 89,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        420
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 164
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 175
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            143
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.4
+      ]
+    },
+    {
+      "id": 95,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        1110
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 166
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 177
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            148
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.6
+      ]
+    },
+    {
+      "id": 102,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        1660
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 167
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 178
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            151
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.7000000000000001
+      ]
+    },
+    {
+      "id": 109,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        2360
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 156
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 193
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            157
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 111,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        2470
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 158
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            159
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 108,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        2350
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 183
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 184
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            156
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.9
+      ]
+    },
+    {
+      "id": 107,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        2490
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 170
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 185
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            158
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 114,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        -830
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 160
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 186
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            161
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 41,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        492,
+        538
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            78,
+            79
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            63,
+            77,
+            134,
+            139,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "v1-5-pruned.safetensors"
+      ]
+    },
+    {
+      "id": 97,
+      "type": "VAEDecode",
+      "pos": [
+        2570,
+        980
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 195
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 189
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            147
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 96,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        970
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 165
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 176
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            195
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.5
+      ]
+    },
+    {
+      "id": 113,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        -840
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 162
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 171
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            160
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 86,
+      "type": "SaveImage",
+      "pos": [
+        3215,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 135
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 115,
+      "type": "SaveImage",
+      "pos": [
+        2893,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 161
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 88,
+      "type": "SaveImage",
+      "pos": [
+        3537,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 137
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 92,
+      "type": "SaveImage",
+      "pos": [
+        3859,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 142
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 94,
+      "type": "SaveImage",
+      "pos": [
+        4181,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 144
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 98,
+      "type": "SaveImage",
+      "pos": [
+        4503,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 147
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 100,
+      "type": "SaveImage",
+      "pos": [
+        4824,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 149
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 104,
+      "type": "SaveImage",
+      "pos": [
+        5147,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 152
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "SaveImage",
+      "pos": [
+        5468,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 154
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "SaveImage",
+      "pos": [
+        5789,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 157
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 112,
+      "type": "SaveImage",
+      "pos": [
+        6112,
+        -864
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 159
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "LatentInterpolate",
+      "pos": [
+        2130,
+        1783
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 180
+        },
+        {
+          "name": "samples2",
+          "type": "LATENT",
+          "link": 181
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            153
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentInterpolate"
+      },
+      "widgets_values": [
+        0.8
+      ]
+    },
+    {
+      "id": 43,
+      "type": "VAEEncode",
+      "pos": [
+        1013,
+        1077
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 64
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            68,
+            115,
+            162,
+            164,
+            165,
+            166,
+            167,
+            170,
+            173,
+            180,
+            183
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 44,
+      "type": "VAEEncode",
+      "pos": [
+        1013,
+        1198
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 65
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            69,
+            116,
+            171,
+            174,
+            175,
+            176,
+            177,
+            178,
+            181,
+            184,
+            185
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    }
+  ],
+  "links": [
+    [
+      63,
+      41,
+      2,
+      44,
+      1,
+      "VAE"
+    ],
+    [
+      64,
+      40,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      65,
+      39,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      68,
+      43,
+      0,
+      49,
+      0,
+      "LATENT"
+    ],
+    [
+      69,
+      44,
+      0,
+      49,
+      1,
+      "LATENT"
+    ],
+    [
+      77,
+      41,
+      2,
+      43,
+      1,
+      "VAE"
+    ],
+    [
+      78,
+      41,
+      1,
+      56,
+      0,
+      "CLIP"
+    ],
+    [
+      79,
+      41,
+      1,
+      57,
+      0,
+      "CLIP"
+    ],
+    [
+      115,
+      43,
+      0,
+      78,
+      0,
+      "LATENT"
+    ],
+    [
+      116,
+      44,
+      0,
+      78,
+      1,
+      "LATENT"
+    ],
+    [
+      133,
+      78,
+      0,
+      85,
+      0,
+      "LATENT"
+    ],
+    [
+      134,
+      41,
+      2,
+      85,
+      1,
+      "VAE"
+    ],
+    [
+      135,
+      85,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      136,
+      49,
+      0,
+      87,
+      0,
+      "LATENT"
+    ],
+    [
+      137,
+      87,
+      0,
+      88,
+      0,
+      "IMAGE"
+    ],
+    [
+      139,
+      41,
+      2,
+      87,
+      1,
+      "VAE"
+    ],
+    [
+      141,
+      90,
+      0,
+      91,
+      0,
+      "LATENT"
+    ],
+    [
+      142,
+      91,
+      0,
+      92,
+      0,
+      "IMAGE"
+    ],
+    [
+      143,
+      89,
+      0,
+      93,
+      0,
+      "LATENT"
+    ],
+    [
+      144,
+      93,
+      0,
+      94,
+      0,
+      "IMAGE"
+    ],
+    [
+      147,
+      97,
+      0,
+      98,
+      0,
+      "IMAGE"
+    ],
+    [
+      148,
+      95,
+      0,
+      99,
+      0,
+      "LATENT"
+    ],
+    [
+      149,
+      99,
+      0,
+      100,
+      0,
+      "IMAGE"
+    ],
+    [
+      151,
+      102,
+      0,
+      103,
+      0,
+      "LATENT"
+    ],
+    [
+      152,
+      103,
+      0,
+      104,
+      0,
+      "IMAGE"
+    ],
+    [
+      153,
+      101,
+      0,
+      105,
+      0,
+      "LATENT"
+    ],
+    [
+      154,
+      105,
+      0,
+      106,
+      0,
+      "IMAGE"
+    ],
+    [
+      156,
+      108,
+      0,
+      109,
+      0,
+      "LATENT"
+    ],
+    [
+      157,
+      109,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ],
+    [
+      158,
+      107,
+      0,
+      111,
+      0,
+      "LATENT"
+    ],
+    [
+      159,
+      111,
+      0,
+      112,
+      0,
+      "IMAGE"
+    ],
+    [
+      160,
+      113,
+      0,
+      114,
+      0,
+      "LATENT"
+    ],
+    [
+      161,
+      114,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      162,
+      43,
+      0,
+      113,
+      0,
+      "LATENT"
+    ],
+    [
+      164,
+      43,
+      0,
+      89,
+      0,
+      "LATENT"
+    ],
+    [
+      165,
+      43,
+      0,
+      96,
+      0,
+      "LATENT"
+    ],
+    [
+      166,
+      43,
+      0,
+      95,
+      0,
+      "LATENT"
+    ],
+    [
+      167,
+      43,
+      0,
+      102,
+      0,
+      "LATENT"
+    ],
+    [
+      170,
+      43,
+      0,
+      107,
+      0,
+      "LATENT"
+    ],
+    [
+      171,
+      44,
+      0,
+      113,
+      1,
+      "LATENT"
+    ],
+    [
+      173,
+      43,
+      0,
+      90,
+      0,
+      "LATENT"
+    ],
+    [
+      174,
+      44,
+      0,
+      90,
+      1,
+      "LATENT"
+    ],
+    [
+      175,
+      44,
+      0,
+      89,
+      1,
+      "LATENT"
+    ],
+    [
+      176,
+      44,
+      0,
+      96,
+      1,
+      "LATENT"
+    ],
+    [
+      177,
+      44,
+      0,
+      95,
+      1,
+      "LATENT"
+    ],
+    [
+      178,
+      44,
+      0,
+      102,
+      1,
+      "LATENT"
+    ],
+    [
+      180,
+      43,
+      0,
+      101,
+      0,
+      "LATENT"
+    ],
+    [
+      181,
+      44,
+      0,
+      101,
+      1,
+      "LATENT"
+    ],
+    [
+      183,
+      43,
+      0,
+      108,
+      0,
+      "LATENT"
+    ],
+    [
+      184,
+      44,
+      0,
+      108,
+      1,
+      "LATENT"
+    ],
+    [
+      185,
+      44,
+      0,
+      107,
+      1,
+      "LATENT"
+    ],
+    [
+      186,
+      41,
+      2,
+      114,
+      1,
+      "VAE"
+    ],
+    [
+      187,
+      41,
+      2,
+      91,
+      1,
+      "VAE"
+    ],
+    [
+      188,
+      41,
+      2,
+      93,
+      1,
+      "VAE"
+    ],
+    [
+      189,
+      41,
+      2,
+      97,
+      1,
+      "VAE"
+    ],
+    [
+      190,
+      41,
+      2,
+      99,
+      1,
+      "VAE"
+    ],
+    [
+      191,
+      41,
+      2,
+      103,
+      1,
+      "VAE"
+    ],
+    [
+      192,
+      41,
+      2,
+      105,
+      1,
+      "VAE"
+    ],
+    [
+      193,
+      41,
+      2,
+      109,
+      1,
+      "VAE"
+    ],
+    [
+      194,
+      41,
+      2,
+      111,
+      1,
+      "VAE"
+    ],
+    [
+      195,
+      96,
+      0,
+      97,
+      0,
+      "LATENT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.16600246545590225,
+      "offset": [
+        2032.324803127264,
+        1791.1501163771713
+      ]
+    },
+    "groupNodes": {}
+  },
+  "version": 0.4
+}
